@@ -13,17 +13,17 @@ go run main.go
 
 ## DOCKER STUFF
 
-### 8. Docker Build
+### 1. Docker Build
 ```bash
 docker build -t api-joshbacon-name:latest .
 ```
 
-### 10. Docker Run
+### 2. Docker Run
 ```bash
 docker run -e PORT=8080 -p 8080:8080 api-joshbacon-name:latest
 ```
 
-### 9. Docker Publish
+### 3. Docker Publish
 ```bash
 docker tag api-joshbacon-name:latest gcr.io/rich-involution-105622/api-joshbacon-name:latest
 docker push gcr.io/rich-involution-105622/api-joshbacon-name:latest
@@ -31,7 +31,7 @@ docker push gcr.io/rich-involution-105622/api-joshbacon-name:latest
 
 ## DEPLOYMENT
 
-### 11. Google Cloud Run 
+### 1. Google Cloud Run 
 ```bash
 gcloud run deploy api-joshbacon-name \
 --image gcr.io/rich-involution-105622/api-joshbacon-name:latest \
@@ -65,7 +65,7 @@ go test -mod vendor ./... -coverprofile=go-test-coverage.out
 - Test logs are printed to `STDOUT` and `go-test-report.json`
 - Test coverage report is printed to `go-test-coverage.json`
 
-### 7. Build Executable
+### 5. Build Executable
 ```bash
 go build -o executable -mod vendor ./...
 ```
